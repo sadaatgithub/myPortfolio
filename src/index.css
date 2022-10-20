@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .btn-active {
+      /* ... */
+      @apply border-b-4 border-teal-400
+    }
+    .font-poppins{
+        font-family:"Poppins"
+    }
+    .skill-cards{
+      @apply border-[1px] sm:w-1/4 w-full p-6 flex flex-col items-center space-y-3 rounded-md shadow-sm
+    }
+    .anim-delay-75{
+      animation-delay:0.075s;
+    }
+    .anim-delay-100{
+      animation-delay:0.1s;
+    } .anim-delay-150{
+      animation-delay:0.150s;
+    } .anim-delay-200{
+      animation-delay:0.2s;
+    }
+    .anim-delay-300{animation-delay:0.3s}
+    .anim-delay-400{
+      animation-delay:0.4s;
+    } .anim-delay-500{
+      animation-delay:0.5s;
+    }
+    .anim-delay-600{
+      animation-delay:0.6s;
+    }.anim-delay-800{
+      animation-delay:0.8s;
+    }
+    .anim-delay-900{
+      animation-delay:0.9s;
+    }
+    .anim-delay-700{
+      animation-delay:0.7s;
+    } .anim-delay-1000{
+      animation-delay:1s;
+    }
+    .anim-delay-1500{
+      animation-delay:1.5s;
+    }
+    .card:before{
+      content:'';
+      position: absolute;
+      /* background-color:#c23aa4d8; */
+      width:100%;
+      height:100%;
+      z-index: 2;
+      transform: skew(45deg) scaleX(0);
+      transition: all 500ms cubic-bezier(.175,.885,.32,1.275);
+    }
+    .card:hover:before{
+      transform: skew(0deg) scaleX(1);
+    
+    }
+    .hero-banner:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(13, 22, 37, 0.753);
+    }
+    #text-effect>path:nth-child(1){
+      stroke-dasharray: 301;      
+      stroke-dashoffset: 301px;
+      animation: text-effect 2.5s ease forwards;
+  
+      
+  }
+  #text-effect>path:nth-child(2){
+      stroke-dasharray: 193px;
+      stroke-dashoffset: 193px;
+      animation: text-effect 2.5s ease forwards;
+      /* animation: fill 1s ease forwards 2.5s; */
+  
+  
+      
+  }
+  @keyframes text-effect{
+    to{
+        stroke-dashoffset:0;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  }
