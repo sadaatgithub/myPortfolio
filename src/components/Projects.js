@@ -4,6 +4,7 @@ import project1 from "../assets/imgs/project1.jpg"
 import project2 from "../assets/imgs/project2.jpg"
 import project3 from "../assets/imgs/project3.jpg"
 import EachProject from './EachProject';
+import Heading from './Heading';
 
 const Projects = () => {
 
@@ -18,25 +19,23 @@ const Projects = () => {
     ]
 
     const { ref, inView } = useInView({
-        triggerOnce: true,
-        // threshold:0.3,
+        // triggerOnce: true,
+        threshold:0.1,
        
       });
 
 
   return (
     <>
-    <div  name="projects" id="projects" className="flex flex-col items-center sm:mt-36 min-h-[100vh]">
-    <h2 className= {`${inView? "animate-fadeIn transition-all":"opacity-0"} text-center mt-4 text-2xl sm:text-4xl font-bold  text-slate-700 mb-2  p-2  tracking-wider  border-b-4 border-teal-400 `}>
-      PROJECTS
-    </h2>
+    <div  name="projects" id="projects" className="flex flex-col items-center sm:mt-36 min-h-[100vh] dark:bg-[#252525] py-8">
+   
+      <Heading title={"PROJECT"} inView={inView} animProp={"slideInLeft"}/>
 
-{/* flex flex-col justify-center items-center sm:flex-row sm:flex-wrap */}
     <div ref={ref} className="grid grid-cols-1 grid-flow-row sm:grid-cols-2 lg:grid-cols-3  gap-6 mt-24">
 
 
         {projects.map((data) =>{
-            return <EachProject key={data.id} inView={inView} {...data}/>})}
+            return <EachProject key={data.id}  {...data}/>})}
 
 
 
@@ -56,28 +55,7 @@ const Projects = () => {
           </div> */}
 
 
-          {/* 
-
-          <div className={`${inView? "animate-slideInRight transition-all anim-delay-300":"opacity-0"} rounded border-[1px] sm:max-w-sm
-                            h-[300px] relative overflow-hidden group transition-all card before:bg-teal-400/90`}>
-              <img src={project2} alt="project3"  className="w-full object-cover h-full rounded-t-sm group-hover:scale-105 transition"/>
-             
-              <div className="p-4 absolute inset-0 z-10 flex flex-col justify-between">
-                <div className="transform -translate-y-[50px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
-                  <h4 className="mt-4 text-white text-xl">Project 3</h4>
-                  <p className="text-white text-sm">Indias fastest growing eccommerce app</p>
-                  </div>
-
-                  <div className="opacity-0 flex justify-between items-center transform translate-y-16 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300">
-                      <button className="px-4 py-2 bg-[#2b3546] text-white
-                      rounded">VIEW CODE</button>
-                       <button className="text-white px-4 py-2 border border-gray-300
-                      rounded hover:border-gray-700">LIVE DEMO</button>
-                  </div>
-              </div>
-          </div>
-
-        */}
+          
     </div>
   </div></>
   )

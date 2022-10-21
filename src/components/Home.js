@@ -1,4 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+import {MdDarkMode,MdOutlineLightMode} from "react-icons/md"
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { useState } from "react";
@@ -10,8 +11,9 @@ import ScrollHere from "./ScrollHere";
 import Footer from "./Footer";
 import resume from "../assets/resume/srcfrontend.pdf"
 
-const Home = () => {
+const Home = ({toggleTheme,toggle}) => {
   const [burgerOpen, setBurgerOpen] = useState(false);
+
   const burgerHandler = () => {
     setBurgerOpen(!burgerOpen);
     console.log(burgerOpen);
@@ -28,6 +30,7 @@ const Home = () => {
 
   return (
     <>
+    <div className="h-full dark:bg-[#252525]">
 
       <div
         className={`${
@@ -108,7 +111,11 @@ const Home = () => {
              hover:bg-teal-500 animate-fadeIn transition-all anim-delay-500
               " value="Resume" type="button"
             />
+
+          <button className= {`${animateNav? "text-black":"text-white"} px-2 py-3 sm:ml-4 ml-0 mr-6 sm:mr-0`} onClick={toggleTheme} >{toggle?<MdOutlineLightMode/>: <MdDarkMode/>}</button>
         <div className="sm:hidden z-40 absolute right-2">
+
+
           {burgerOpen ? (
             <FaTimes onClick={burgerHandler} color={"white"} size={25} />
           ) : (
@@ -127,26 +134,26 @@ const Home = () => {
             className="flex p-6 flex-col justify-center items-center gap-4 text-center z-10
               flex-grow-1  border-1"
           >
-            <div className="mt-14 text-3xl sm:text-6xl font-poppins font-semibold text-white animate-slideInRight transition-all anim-delay-500 sm:mt-6">
+            <div className="mt-14 text-3xl sm:text-6xl font-poppins font-semibold text-white  animate-slideInBottom transition-all anim-delay-500 sm:mt-6">
               <h1 className="uppercase">
                 <span className=" ">Hi <span className="text-teal-400">,</span> I'am <span className="text-teal-400">,</span> </span>
                 <span className="">Sadanand</span>
               </h1>
             </div>
-            <h5 className="text-blue-400 uppercase text-xl mt-4 sm:text-2xl font-bold tracking-widest animate-slideInRight transition-all anim-delay-800">
+            <h5 className="text-blue-400 uppercase text-xl mt-4 sm:text-2xl font-bold tracking-widest animate-slideInBottom transition-all anim-delay-800">
               Frontend Web Developer
             </h5>
-            <p className="text-sm leading-loose w-auto text-center sm:w-2/4 sm:text-base mt-2 text-white/80 animate-slideInRight transition-all anim-delay-900 ">
+            <p className="text-sm leading-loose w-auto text-center sm:w-2/4 sm:text-base mt-2 text-white/80 animate-slideInBottom transition-all anim-delay-900 ">
             A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product
             </p>
             <a href={resume} download
-              className="py-3 flex justify-center items-center gap-4 px-8 bg-gradient-to-t from-teal-600  to-teal-400
+              className="py-3 flex justify-center items-center gap-4 px-8 bg-teal-500
               mt-4 text-base text-white rounded tracking-wider font-semibold 
-               hover:shadow-sm animate-slideInRight transition-all anim-delay-1000 cursor-pointer 
+               hover:shadow-sm animate-slideInBottom transition-all anim-delay-1000 cursor-pointer 
               ">GET RESUME
              </a>
           </div>
-          {/* <div className="flex justify-center items-center  animate-slideInRight transition-all anim-delay-1000 p-2">
+          {/* <div className="flex justify-center items-center  animate-slideInLeft transition-all anim-delay-1000 p-2">
             <img src={webdev} alt="" /
           </div> */}
         </main>
@@ -155,6 +162,7 @@ const Home = () => {
         <Projects />
         <Contact />
         <Footer/>
+      </div>
       </div>
     </>
   );

@@ -6,7 +6,11 @@ import InitialLoader from "./components/InitialLoader";
 
 function App() {
   const [loader,setLoader] = useState(true)
+  const [toggleDark,setToggleDark] = useState(false)
 
+  const toggleDarkLight = ()=>{
+    setToggleDark(!toggleDark)
+  }
   useEffect(() =>{
     // setLoader(true)
     setTimeout(() =>{
@@ -17,8 +21,10 @@ function App() {
 
   return (
     <>
-    {loader? <InitialLoader/>: <Home />
+    <div className={`${toggleDark? "dark":""} transition-all`}>
+    {loader? <InitialLoader/>: <Home toggleTheme={toggleDarkLight} toggle={toggleDark} />
     }
+    </div>
     </>
   );
 }

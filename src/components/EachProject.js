@@ -1,12 +1,23 @@
 import React from "react";
+import { useInView } from 'react-intersection-observer';
 
-const EachProject = ({ inView, ...data }) => {
+
+
+
+
+const EachProject = ({...data }) => {
+  const { ref, inView } = useInView({
+    // triggerOnce: true,
+    threshold:0.3,
+   
+  });
+
   return (
     <>
-      <div 
+      <div ref={ref}
         className={`${
           inView
-            ? "animate-slideInRight transition-all anim-delay-300"
+            ? "animate-fadeIn transition-all anim-delay-300"
             : "opacity-0"} rounded border-[1px] sm:max-w-sm h-[300px] relative overflow-hidden group transition-all card
          before:bg-teal-400/90`}
       >

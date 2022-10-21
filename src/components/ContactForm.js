@@ -1,32 +1,69 @@
-import React from 'react'
 import {FaGithub,FaLinkedin} from "react-icons/fa"
 import {AiOutlineMail} from "react-icons/ai"
 import {IoMdCall} from "react-icons/io"
-
+import { useRef,useState } from 'react'
+import emailjs from "emailjs-com"
+import {ImSpinner8} from "react-icons/im"
 const ContactForm = () => {
+
+  const [message,setMessage] = useState({
+    isLoading:null,
+    isSuccess:false
+  })
+
+const form = useRef()
+
+  const sendEmail =(e) =>{
+    e.preventDefault()
+    setMessage({
+      ...message,
+      isLoading:true,
+    })
+console.log('Send')
+    emailjs.sendForm(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      form.current,process.env.REACT_APP_USER_ID
+    ).then(
+      response => response.status === 200?  
+      setMessage({
+        ...message,
+        isLoading:false,
+        isSuccess:true,
+      }):null
+      ,
+      error =>console.log(error.text)
+      
+      )
+      e.target.reset()
+    
+  }
+
   return (
     <>
-    <div className="w-full sm:w-2/3 flex items-center justify-center bg-white rounded-xl py-20 shadow-md relative mb-8">
-        <form action="" className="w-[90%] max-w-lg flex flex-col gap-y-4">
+    <div className="w-full sm:w-2/3 flex items-center justify-center bg-white dark:bg-[#323232] rounded-xl py-20 shadow-md relative mb-8">
+        <form ref={form} onSubmit={sendEmail} className="w-[90%] max-w-lg flex flex-col gap-y-4">
             <div className="">
-            <label formHTML="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" className="block w-full border border-gray-300 p-2 rounded
-             focus:border-red-300 mt-1"/>
+            <label formHTML="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+            <input type="text" name="user_name" className="block w-full border border-gray-300 p-2 rounded dark:bg-[#505050]
+            dark:border-gray-500 focus:border-red-300 mt-1"/>
              </div>
             <div className="">
 
-            <label formHTML="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label formHTML="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
 
-             <input type="text" className="border border-gray-300 w-full p-2 rounded focus:border-indigo-500 mt-1"/>
+             <input type="text" name="user_email" className="border border-gray-300 w-full p-2 rounded focus:border-indigo-500 mt-1 dark:bg-[#505050]
+            dark:border-gray-500"/>
         </div>
         <div className="">
-            <label formHTML="message" className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea name="" id="" rows="5" className="block border border-gray-300 w-full
-             focus:border-red-300 mt-1"></textarea>
+            <label formHTML="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+            <textarea name="message" id="" rows="5" className="block border border-gray-300 w-full
+             focus:border-red-300 mt-1 dark:bg-[#505050]
+             dark:border-gray-500"></textarea>
 
         </div>
         <div className="">
-            <button type="submit" className="p-4 mt-2 bg-teal-400 w-full text-white rounded">SEND MESSAGE</button>
+            <button type="submit" className="p-4 mt-2 bg-teal-400 w-full text-white rounded flex justify-center items-center"> {message.isLoading? <ImSpinner8 className="animate-spin text-2xl"/>:message.isSuccess?"Meessage Sent":"Send Message"}</button>
         </div>
         </form>
 
