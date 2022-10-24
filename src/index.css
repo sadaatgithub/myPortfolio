@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Nunito:wght@400;800&family=Port+Lligat+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer utilities { 
     .btn-active {
       /* ... */
       @apply border-b-4 border-teal-400
@@ -13,9 +14,8 @@
     .font-poppins{
         font-family:"Poppins"
     }
-    .skill-cards{
-      @apply border-[1px] border-[#757575] w-full p-6 flex flex-col items-center place-self-center space-y-3 rounded-sm shadow-sm ;
-      max-width: 350px;
+    .bg-lightBlue{
+      background-color: #25b8ba;
     }
     .anim-delay-75{
       animation-delay:0.075s;
@@ -93,28 +93,28 @@
     opacity: 0;
     width: 0;
     height: 0;
+    /* visibility: hidden; */
   }
   .slideBtnTg {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+   
+    /* width: 20px;
+    height: 10px; */
     background-color: rgb(241, 40, 40);
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .slideBtnTg:before {
-    position: absolute;
-    content: "";
+  .slideBtnTg .slideToggle {
     height: 30px;
     width: 30px;
+    background-color: white;
+    position: absolute;
+ 
     left: 5px;
+    border-radius: 50%;
     bottom: 5px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    background-color: white;
+   
   }
   input:checked + .slideBtnTg {
     background-color: #1d1e1f;
@@ -133,6 +133,8 @@
   .slideBtnTg.round:before {
     border-radius: 50%;
   }
+  
+
   @keyframes text-effect{
     to{
         stroke-dashoffset:0;

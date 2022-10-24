@@ -30,7 +30,7 @@ const Home = ({toggleTheme,toggle}) => {
 
   return (
     <>
-    <div className="h-full dark:bg-[#252525]">
+    <div className="dark:bg-[#252525] transition duration-500 ease-in-out">
 
       <div
         className={`${
@@ -112,7 +112,15 @@ const Home = ({toggleTheme,toggle}) => {
               " value="Resume" type="button"
             />
 
-          <button className= {`${animateNav? "text-black":"text-white"} px-2 py-3 sm:ml-4 ml-0 mr-6 sm:mr-0`} onClick={toggleTheme} >{toggle?<MdOutlineLightMode/>: <MdDarkMode/>}</button>
+          {/* <button className= {`${animateNav? "text-black":"text-white"} px-2 py-3 sm:ml-4 ml-0 mr-6 sm:mr-0`} onClick={toggleTheme} >{toggle?<MdOutlineLightMode/>: <MdDarkMode/>}</button> */}
+        <div className={`${toggle? "bg-[#343434]":"bg-transparent"} cursor-pointer h-[40px] border border-gray-500  w-[70px] p-1 
+                          rounded-full flex sm:ml-4 ml-0 mr-6 sm:mr-0 transition duration-500 shadow-sm" `} onClick={toggleTheme}>
+          <div className= {`${toggle? "translate-x-[30px] rotate-180 bg-teal-500":"bg-teal-400"}  
+                        h-full rounded-full w-1/2 flex justify-center items-center transition duration-300 text-white font-semibold`}>
+          {toggle?<MdOutlineLightMode/>: <MdDarkMode/>}
+          </div>
+        </div>
+
         <div className="sm:hidden z-40 absolute right-2">
 
 
@@ -128,23 +136,24 @@ const Home = ({toggleTheme,toggle}) => {
 
         <main
           name="about"
-          className="hero-banner relative flex justify-center items-center w-full bg-white text-gray-800 h-[100vh] bg-hero-pattern2 bg-cover bg-center overflow-hidden]"
+          className="hero-banner relative flex justify-center items-center w-full  text-gray-800 h-[100vh] bg-hero-pattern2 bg-cover bg-center overflow-hidden]"
         >
           <div
             className="flex p-6 flex-col justify-center items-center gap-4 text-center z-10
               flex-grow-1  border-1"
           >
-            <div className="mt-14 text-3xl sm:text-6xl font-poppins font-semibold text-white  animate-slideInBottom transition-all anim-delay-500 sm:mt-6">
+            <div className="mt-14 text-3xl sm:text-6xl font-nunito font-semibold text-white dark:text-gray-200  animate-slideInBottom transition-all anim-delay-500 sm:mt-6">
               <h1 className="uppercase">
                 <span className=" ">Hi <span className="text-teal-400">,</span> I'am <span className="text-teal-400">,</span> </span>
                 <span className="">Sadanand</span>
               </h1>
             </div>
-            <h5 className="text-blue-400 uppercase text-xl mt-4 sm:text-2xl font-bold tracking-widest animate-slideInBottom transition-all anim-delay-800">
+            <h5 className="text-blue-400 uppercase text-xl mt-4 sm:text-2xl font-port-ligat-sans font-bold tracking-widest animate-slideInBottom transition-all anim-delay-800">
               Frontend Web Developer
             </h5>
-            <p className="text-sm leading-loose w-auto text-center sm:w-2/4 sm:text-base mt-2 text-white/80 animate-slideInBottom transition-all anim-delay-900 ">
-            A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product
+            <p className="text-sm leading-loose w-auto text-center sm:w-1/2 sm:text-base mt-2 text-white/80 animate-slideInBottom transition-all anim-delay-900 ">
+            A Frontend focused Web Developer building the Frontend of Websites and 
+            Web Applications that leads to the success of the overall product
             </p>
             <a href={resume} download
               className="py-3 flex justify-center items-center gap-4 px-8 bg-teal-500
