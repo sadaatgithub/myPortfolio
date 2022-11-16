@@ -68,24 +68,25 @@ console.log('Send')
 
   return (
     <>
-    <div ref={formRef} className={`${inView? "animate-slideInBottom transition-all":"opacity-0"} w-full sm:w-2/3 flex items-center justify-center bg-white dark:bg-[#323232] rounded-xl py-20 shadow-md relative mb-8 `}>
+    <div ref={formRef} className={`${inView? "animate-slideInBottom transition-all":"opacity-0"} w-full sm:w-2/3 flex items-center justify-center bg-white dark:bg-[#323232] rounded-xl py-20 shadow-md relative mb-8 transition duration-1000 ease-in-out `}>
         <form ref={form} onSubmit={sendEmail} className="w-[90%] max-w-lg flex flex-col gap-y-4">
             <div className="">
-            <label forhtml="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
-            <input type="text" required name="user_name" className="block w-full border p-2 rounded dark:bg-[#505050]
+            <label forhtml="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition duration-1000 ease-in-out">Name</label>
+            <input type="text" required name="user_name" className="block w-full border p-2 rounded dark:bg-[#505050] transition duration-1000 ease-in-out
             dark:border-gray-500 focus:border-indigo-500 mt-1 outline-none"/>
              </div>
             <div className="">
 
-            <label forhtml="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+            <label forhtml="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition duration-1000 ease-in-out">Email</label>
 
              <input type="text" required name="user_email" className="border outline-none border-gray-300 w-full p-2 rounded focus:border-indigo-500 mt-1 dark:bg-[#505050]
+             transition duration-1000 ease-in-out
             dark:border-gray-500"/>
         </div>
         <div className="">
-            <label forhtml="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+            <label forhtml="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 transition duration-1000 ease-in-out">Message</label>
             <textarea name="message" id="" rows="5" className="block border border-gray-300 w-full outline-none
-             focus:border-indigo-500 mt-1 dark:bg-[#505050] rounded
+             focus:border-indigo-500 mt-1 dark:bg-[#505050] rounded transition duration-1000 ease-in-out
              dark:border-gray-500"></textarea>
         </div>
         <div className="">
@@ -96,14 +97,13 @@ console.log('Send')
 
 <div className="w-full absolute -bottom-5 left-0 flex justify-evenly">
 
-{/* <h3 className="text-3xl">SOCIAL</h3> */}
  <div className="flex w-full justify-center sm:justify-between sm:w-1/3 gap-x-2 [&>*]:text-[#343434] [&>*:hover]:bg-[#343434] [&>*:hover]:text-white [&>*:hover]:transition [&>*:hover]:duration-500 [&>*]:duration-500">
   
                {socialLinks.map((link) =>{
-                return <a key={link.href} href={link.href} className="flex gap-4 items-center bg-white p-2 rounded-full border shadow-md [&>*]:text-2xl">{link.icon}</a>
+                return <a key={link.href} href={link.href} className="flex gap-4 items-center bg-white dark:bg-[#343434] dark:text-teal-400 p-2 rounded-full border shadow-md [&>*]:text-2xl transition duration-1000 ease-in-out">{link.icon}</a>
                })}
               </div>
-  </div>
+              </div>
 
         </div>
     </>

@@ -30,17 +30,17 @@ const Home = ({toggleTheme,toggle}) => {
 
   return (
     <>
-    <div className="dark:bg-[#252525] transition duration-500 ease-in-out">
+    <div className="dark:bg-[#252525] transition duration-1000 ease-in-out max-w-[1440px] mx-auto">
 
       <div
         className={`${
           animateNav
             ? "transition-all animate-fadeIn backdrop-blur-[3px] shadow-sm bg-white/90"
-            : " bg-transparent"
-        } fixed left-0 top-0 flex justify-between items-center p-3 w-full z-50`}
+            : "bg-transparent"
+        } fixed left-0 top-0 right-0 flex justify-between items-center p-3 w-full z-50 max-w-[1440px] mx-auto dark:bg-[#252525]/50 dark:text-white transition duration-1000 ease-in-out`}
       >
         <div className="logo animate-fadeIn transition-all sm:pl-10">
-          <h1 className= {`${animateNav? "text-[hsl(240,4%,20%)]":"text-white"} text-2xl sm:text-4xl font-extrabold  font-marck`}>
+          <h1 className= {`${animateNav? "text-[hsl(240,4%,20%)] dark:text-white":"text-white"} text-2xl sm:text-4xl font-extrabold  font-marck`}>
             SadaNand
           </h1>
         </div>
@@ -48,8 +48,8 @@ const Home = ({toggleTheme,toggle}) => {
           className={`${
             burgerOpen
               ? "flex fixed top-0 left-0 bottom-0 right-0 bg-[#181616cb] h-[100vh]  backdrop-blur-[4px] text-white  flex-col space-y-4 justify-center items-center z-20 animate-drawerDown transition-all"
-              : "hidden sm:flex sm:flex-row sm:text-black font-lighter sm:relative gap-x-6 justify-between ml-auto mr-8"
-          } [&>*]:py-1 ${animateNav? "sm:[&>*]:text-black [&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
+              : "hidden sm:flex sm:flex-row sm:text-black font-lighter sm:relative sm:gap-x-1 lg:gap-x-6 justify-between ml-auto mr-8"
+          } [&>*]:py-1 ${animateNav? "sm:[&>*]:text-black dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
         >
           <Link
             activeClass="btn-active"
@@ -109,30 +109,36 @@ const Home = ({toggleTheme,toggle}) => {
               className="hidden sm:block px-3 py-2 bg-teal-400
              text-white  tracking-wide rounded
              hover:bg-teal-500 animate-fadeIn transition-all anim-delay-500
-              " value="Resume" type="button"
+              " value="RESUME" type="button"
             />
 
-          {/* <button className= {`${animateNav? "text-black":"text-white"} px-2 py-3 sm:ml-4 ml-0 mr-6 sm:mr-0`} onClick={toggleTheme} >{toggle?<MdOutlineLightMode/>: <MdDarkMode/>}</button> */}
-        <div className={`${toggle? "bg-[#343434]":"bg-transparent"} cursor-pointer h-[40px] border border-gray-500  w-[70px] p-1 
+          <button className= {`${animateNav? "text-black dark:text-teal-400":"dark:text-teal-400 text-white"} px-2 py-2 sm:ml-4 ml-0 mr-6 sm:mr-0 text-xl rounded-full`} onClick={toggleTheme} >{toggle?<MdOutlineLightMode/>: <MdDarkMode/>}</button>
+       
+       
+        {/* <div className={`${toggle? "bg-[#343434]":"bg-transparent"} cursor-pointer h-[40px] border border-gray-500  w-[70px] p-1 
                           rounded-full flex sm:ml-4 ml-0 mr-6 sm:mr-0 transition duration-500 shadow-sm" `} onClick={toggleTheme}>
           <div className= {`${toggle? "translate-x-[30px] rotate-180 bg-teal-500":"bg-teal-400"}  
-                        h-full rounded-full w-1/2 flex justify-center items-center transition duration-300 text-white font-semibold`}>
+                        h-full rounded-full w-1/2 flex justify-center items-center transition duration-1000 text-white font-semibold`}>
           {toggle?<MdOutlineLightMode/>: <MdDarkMode/>}
           </div>
-        </div>
-
-        <div className="sm:hidden z-40 absolute right-2">
+        </div> */}
 
 
+
+{/* Hamburger menu ------------------------> */}
+
+
+        <div className="sm:hidden z-40 absolute right-2 dark:text-white">
           {burgerOpen ? (
             <FaTimes onClick={burgerHandler} color={"white"} size={25} />
           ) : (
-            <GiHamburgerMenu onClick={burgerHandler} size={20} color={animateNav? "black":"white"} />
+            <GiHamburgerMenu onClick={burgerHandler} size={20} className={`${animateNav? "text-black dark:text-white":"text-white"}`} />
           )}
         </div>
       </div>
-        {/* Hero section */}
         <div className=" mx-auto flex flex-col h-full">
+
+{/* Hero section-------------------> */}
 
         <main
           name="about"
@@ -142,23 +148,27 @@ const Home = ({toggleTheme,toggle}) => {
             className="flex p-6 flex-col justify-center items-center gap-4 text-center z-10
               flex-grow-1  border-1"
           >
-            <div className="mt-14 text-3xl sm:text-6xl font-nunito font-semibold text-white dark:text-gray-200  animate-slideInBottom transition-all anim-delay-500 sm:mt-6">
-              <h1 className="uppercase">
-                <span className=" ">Hi <span className="text-teal-400">,</span> I'am <span className="text-teal-400">,</span> </span>
+            <div className="mt-14 text-3xl sm:text-6xl font-nunito font-semibold text-white dark:text-gray-200  sm:mt-6 overflow-hidden">
+              <h1 className="uppercase animate-slideInBottom transition-all anim-delay-500">
+                <span className="">Hi <span className="text-teal-400">,</span> I'am <span className="text-teal-400">,</span> </span>
                 <span className="">Sadanand</span>
               </h1>
             </div>
-            <h5 className="text-blue-400 uppercase text-xl mt-4 sm:text-2xl font-port-ligat-sans font-bold tracking-widest animate-slideInBottom transition-all anim-delay-800">
+            <div className="overflow-hidden">
+            <h3 className="text-blue-400 uppercase text-xl mt-4 sm:text-3xl font-port-ligat-sans font-bold tracking-widest animate-slideInBottom transition-all anim-delay-800">
               Frontend Web Developer
-            </h5>
+            </h3>
+            </div>
+            <div className="overflow-hidden flex justify-center">
             <p className="text-sm leading-loose w-auto text-center sm:w-1/2 sm:text-base mt-2 text-white/80 animate-slideInBottom transition-all anim-delay-900 ">
             A Frontend focused Web Developer building the Frontend of Websites and 
             Web Applications that leads to the success of the overall product
             </p>
+            </div>
             <a href={resume} download
               className="py-3 flex justify-center items-center gap-4 px-8 bg-teal-500
               mt-4 text-base text-white rounded tracking-wider font-semibold 
-               hover:shadow-sm animate-slideInBottom transition-all anim-delay-1000 cursor-pointer 
+               hover:shadow-sm hover:bg-teal-600 animate-slideInBottom transition-all anim-delay-1000 cursor-pointer 
               ">GET RESUME
              </a>
           </div>
@@ -166,7 +176,8 @@ const Home = ({toggleTheme,toggle}) => {
             <img src={webdev} alt="" /
           </div> */}
         </main>
-          <ScrollHere/>
+
+        <ScrollHere/>
         <About />
         <Projects />
         <Contact />

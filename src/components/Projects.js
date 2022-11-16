@@ -2,36 +2,37 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer';
 import project1 from "../assets/project_imgs/Project_NHR_1.png"
 import project2 from "../assets/project_imgs/Stripe_Submenus.png"
-import project3 from "../assets/imgs/project3.jpg"
 import EachProject from './EachProject';
 import Heading from './Heading';
 
 const Projects = () => {
 
     const projects = [
-        {id:1,title:'Ecomm App',desc:"Indias fastest growing eccommerce app",image:project1},
-        {id:2,title:'Project Two',desc:"This is project no 2",image:project2},
-        {id:3,title:'Project Three',desc:"This is project no 3",image:project3},
-        {id:4,title:'Project Four',desc:"This is project no 4",image:project3},
-        {id:5,title:'Project Five',desc:"This is project no 5",image:project2},
-        {id:6,title:'Project Six',desc:"This is project no 6",image:project1},
+        {id:1,title:'Replica Of National Hemophilia Registry',desc:"Mentain all over India patients data ",
+                techStack:["React","Redux-Toolkit","React-Router-dom","Axios","Chart.js","Django REST API","JWT AUTH"],image:project1},
+
+        {id:2,title:'Project Two',desc:"This is project no 2",techStack:["React","Redux-Toolkit","React-Router-dom","Axios","Chart.js","Django REST API","JWT AUTH"],image:project2},
+        {id:3,title:'Project Three',desc:"This is project no 3",techStack:["React","Redux-Toolkit","React-Router-dom","Axios","Chart.js","Django REST API","JWT AUTH"],image:project1},
+        {id:4,title:'Project Four',desc:"This is project no 4",techStack:["React","Redux-Toolkit","React-Router-dom","Axios","Chart.js","Django REST API","JWT AUTH"],image:project2},
+        {id:5,title:'Project Five',desc:"This is project no 5",techStack:["React","Redux-Toolkit","React-Router-dom","Axios","Chart.js","Django REST API","JWT AUTH"],image:project2},
+        {id:6,title:'Project Six',desc:"This is project no 6",techStack:["React","Redux-Toolkit","React-Router-dom","Axios","Chart.js","Django REST API","JWT AUTH"],image:project1},
 
     ]
 
     const { ref, inView } = useInView({
-        // triggerOnce: true,
-        threshold:0.1,
+        triggerOnce: true,
+        // threshold:0.1,
        
       });
 
 
   return (
     <>
-    <div  name="projects" id="projects" className="flex flex-col items-center sm:mt-36 min-h-[100vh] dark:bg-[#252525] py-8 transition duration-500 ease-in-out overflow-hidden">
+    <div  name="projects" id="projects" className="flex flex-col items-center sm:mt-36 min-h-[100vh] dark:bg-[#252525] py-8 transition duration-1000 ease-in-out overflow-hidden">
    
       <Heading title={"PROJECTS"} inView={inView} animProp={"slideInLeft"}/>
 
-    <div ref={ref} className="grid grid-cols-1 grid-flow-row sm:grid-cols-2 lg:grid-cols-3  gap-6 mt-24">
+    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 grid-flow-row  mt-24 px-1 sm:px-10">
 
 
         {projects.map((data,index) =>{

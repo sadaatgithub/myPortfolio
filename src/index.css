@@ -49,17 +49,13 @@
     .anim-delay-1500{
       animation-delay:1.5s;
     }
-    .card:before{
+    .project-card:before{
       content:'';
-      position: absolute;
-      /* background-color:#c23aa4d8; */
-      width:100%;
-      height:100%;
       z-index: 2;
       transform: skew(45deg) scaleX(0);
-      transition: all 500ms cubic-bezier(.175,.885,.32,1.275);
+      @apply bg-teal-400/90 absolute w-full h-full z-[2] transition duration-500 [transition-timing-function:cubic-bezier(.175,.885,.32,1.275)]
     }
-    .card:hover:before{
+    .project-card:hover:before{
       transform: skew(0deg) scaleX(1);
     
     }

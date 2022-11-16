@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-    <div className={`${toggleDark? "dark":""} transition duration-500 ease-in-out`}>
+    <div className={`${toggleDark? "dark":""}`}>
     {loader? <InitialLoader/>: <Home toggleTheme={toggleDarkLight} toggle={toggleDark} />
     }
     </div>
