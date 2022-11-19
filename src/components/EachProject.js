@@ -44,25 +44,25 @@ const EachProject = ({animDelay,...data }) => {
               </div>
              </div> */}
 
-<div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom":"opacity-0"} rounded border-[1px] max-w-sm overflow-hidden group hover:shadow-2xl transition-all flex flex-col `}>
+<div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom":"opacity-0"} rounded border-[1px] dark:border-gray-500 max-w-sm overflow-hidden group hover:shadow-2xl transition-all flex flex-col `}>
               <img src={data.image} alt="project3" loading='lazy' className="w-full object-contain rounded-t-sm group-hover:scale-110 transition-all duration-300"/>
               <div className="p-4 flex flex-col flex-grow">
-                  <h4 className="mt-4 font-semibold">{data.title}</h4>
-                  <p className="text-slate-500 text-sm">{data.desc}</p>
+                  <h4 className="mt-4 font-semibold dark:text-slate-300 uppercase">{data.title}</h4>
+                  <p className="text-slate-500 text-sm dark:text-slate-400">{data.desc}</p>
                   <div class="flex flex-col mt-4">
-                  <h4 className="mb-2 text-sm sm:text-base">TECH USED</h4>
+                  <h4 className="mb-2 text-sm sm:text-base dark:text-white">TECH USED</h4>
                   
-                  <ul className="flex text-xs gap-x-2 flex-wrap gap-y-1">
+                  <ul className="flex text-xs gap-2 flex-wrap">
 
                 {data.techStack.map((tech)=>{
-                  return <li className="bg-gray-200 tracking-wide sm:py-1 p-1 sm:px-2 rounded-sm">{tech}</li>
+                  return <li className="bg-gray-200 tracking-wide sm:py-1 p-1 sm:px-2 rounded-sm dark:bg-gray-700 dark:text-gray-200">{tech}</li>
                 })}
 
                 </ul>
                 </div>
-                  <div className="flex mt-auto">
+                  <div className="flex mt-4 md:mt-auto">
                       <button className="px-4 py-2 bg-sky-500 text-white border border-transparent hover:bg-white hover:border
-                      hover:text-sky-500 hover:border-sky-500 transition-all duration-150
+                      hover:text-sky-500 hover:border-sky-500 transition-all duration-150 dark:bg-sky-700
                       rounded ml-auto"><a href={data.gitLink} target="_blank">View Code</a></button>
                        {/* <button className="px-4 py-2 border border-gray-300
                       rounded hover:border-gray-700">LIVE DEMO</button> */}

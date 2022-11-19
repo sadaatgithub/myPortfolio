@@ -60,6 +60,7 @@ module.exports = {
                     transform: "translateX(0)",
                     // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
             opacity: 1,
+            visibility:"visible",
             
           }
         },

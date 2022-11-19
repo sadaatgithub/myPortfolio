@@ -11,7 +11,7 @@ const About = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold:0.3,
+    threshold:0.1,
    
   });
 
@@ -31,19 +31,19 @@ const About = () => {
 
   return (
     <>
-    <div name="skills" ref={ref} className="about-me bg-[#fafafa] dark:bg-[#252525] mt-12 flex flex-col items-center sm:mt-48 py-12 transition duration-1000 ease-in-out overflow-hidden">
+    <div name="skills" className="about-me bg-[#fafafa] dark:bg-[#252525] mt-12 flex flex-col items-center sm:mt-48 py-12 transition-all duration-1000 ease-in-out overflow-hidden">
   
-    <Heading title={"SKILLS"} inView={inView} animProp={"slideInRight"}/>
+    <Heading title={"SKILLS"}  animProp={"slideInBottom"}/>
     
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3  grid-flow-row w-full  mt-24 skill-cards gap-y-10 gap-x-10 [&>*]:bg-white
+    <div ref={ref}  className="grid sm:grid-cols-2 lg:grid-cols-3  grid-flow-row w-full  mt-24 skill-cards gap-y-10 gap-x-10 [&>*]:bg-white
     [&>*]:dark:text-white [&>*]:dark:bg-[#363636] transition duration-1000 ease-in-out place-items-stretch  px-1 sm:px-10">
 
           {skills.map((skill) =>{
              
               const animDelay = "anim-delay-"+ 100 * skill.id
 
-            return <div key={skill.id} className={`${inView? "animate-scaleDownCenter" + " "+ animDelay:""}
-              dark:[&>svg]:text-teal-500 [&>svg]:text-5xl relative flex flex-col p-4 rounded-md shadow-sm w-full transition duration-1000 ease-in-out`}>
+            return <div key={skill.id} className={`${inView? "animate-slideInBottom" + " "+ animDelay :""} dark:[&>svg]:text-teal-500 [&>svg]:text-5xl relative flex flex-col p-4 rounded-md shadow-sm w-full 
+            opacity-0 transition-all duration-500 ease-in-out`}>
               
                   <div className= {`absolute -top-5 left-4 p-2 skill-icon text-white  
                   rounded text-2xl ${skill.color}`}> {skill.icon}</div>

@@ -39,8 +39,8 @@ const Projects = () => {
     },
     {
       id: 3,
-      title:"React To-DO",
-      desc: "This is project no 3",
+      title:"To-DO",
+      desc: "A React to-do app",
       techStack: [
         "React",
         "React-hooks",
@@ -113,9 +113,9 @@ const Projects = () => {
       <div
         name="projects"
         id="projects"
-        className="flex flex-col items-center sm:mt-36 min-h-[100vh] dark:bg-[#252525] py-8 transition duration-1000 ease-in-out overflow-hidden"
+        className="flex flex-col items-center sm:mt-36 min-h-[100vh] dark:bg-[#252525] py-8 transition-all duration-1000 ease-in-out overflow-hidden"
       >
-        <Heading title={"PROJECTS"} inView={inView} animProp={"slideInLeft"} />
+        <Heading title={"PROJECTS"} inView={inView} animProp={"slideInBottom"} />
 
         <div
           ref={ref}
