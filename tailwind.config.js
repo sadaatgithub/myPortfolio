@@ -65,7 +65,7 @@ module.exports = {
         },
         slideInBottom:{
           "0%" :{
-                  transform: "translateY(30px)",
+                  transform: "translateY(80px)",
             opacity: 0,
 
           },
@@ -89,7 +89,7 @@ module.exports = {
         },
         scaleDownCenter:{
           "0%":{
-            transform: "scale(2)",
+            transform: "scale(1.5)",
             opacity:0
           },
           "100%":{

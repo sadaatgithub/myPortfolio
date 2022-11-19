@@ -16,9 +16,10 @@ const EachProject = ({animDelay,...data }) => {
   return (
     <>
 
-      <div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom ":"opacity-0"} project-card rounded border-[1px] max-w-md overflow-hidden group hover:shadow-2xl transition-all relative h-[250px] bg-gradient-to-r from-teal-400  to-teal-300`}>
-              
-              <img src={data.image} alt="project3" loading='lazy' className="w-full rounded-t-sm group-hover:scale-110 transition-all duration-500 ease-in-out object-contain"/>
+      {/* <div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom":"opacity-0"} project-card rounded border-[1px] 
+      max-w-md overflow-hidden group hover:shadow-2xl transition-all relative h-[250px] bg-gradient-to-r from-teal-400  to-teal-300`}>
+               */}
+              {/* <img src={data.image} alt="project3" loading='lazy' className="w-full rounded-t-sm group-hover:scale-110 transition-all duration-500 ease-in-out object-contain"/>
 
              
              <div className="absolute w-full h-full z-10 -bottom-50 p-1 sm:p-2 text-[#ffff] opacity-1 group-hover:opacity-100 group-hover:bottom-0 flex flex-col">
@@ -41,12 +42,36 @@ const EachProject = ({animDelay,...data }) => {
                  <a href={data.gitLink} target="_blank">View Code</a></button>
                   <button></button>
               </div>
-             </div>
+             </div> */}
 
-             
+<div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom":"opacity-0"} rounded border-[1px] max-w-sm overflow-hidden group hover:shadow-2xl transition-all flex flex-col `}>
+              <img src={data.image} alt="project3" loading='lazy' className="w-full object-contain rounded-t-sm group-hover:scale-110 transition-all duration-300"/>
+              <div className="p-4 flex flex-col flex-grow">
+                  <h4 className="mt-4 font-semibold">{data.title}</h4>
+                  <p className="text-slate-500 text-sm">{data.desc}</p>
+                  <div class="flex flex-col mt-4">
+                  <h4 className="mb-2 text-sm sm:text-base">TECH USED</h4>
+                  
+                  <ul className="flex text-xs gap-x-2 flex-wrap gap-y-1">
+
+                {data.techStack.map((tech)=>{
+                  return <li className="bg-gray-200 tracking-wide sm:py-1 p-1 sm:px-2 rounded-sm">{tech}</li>
+                })}
+
+                </ul>
+                </div>
+                  <div className="flex mt-auto">
+                      <button className="px-4 py-2 bg-sky-500 text-white border border-transparent hover:bg-white hover:border
+                      hover:text-sky-500 hover:border-sky-500 transition-all duration-150
+                      rounded ml-auto"><a href={data.gitLink} target="_blank">View Code</a></button>
+                       {/* <button className="px-4 py-2 border border-gray-300
+                      rounded hover:border-gray-700">LIVE DEMO</button> */}
+                  </div>
+              </div>
+          </div>
              
               
-          </div>
+          {/* </div> */}
 
       
     </>

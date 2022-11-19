@@ -13,7 +13,7 @@ const Hero = () => {
             className="flex p-6 flex-col justify-center items-center gap-4 text-center z-10
               flex-grow-1  border-1"
           >
-            <div className="mt-14 text-3xl sm:text-6xl font-nunito font-semibold text-white dark:text-gray-200  sm:mt-6 overflow-hidden">
+            <div className="mt-14 text-4xl sm:text-6xl font-nunito font-semibold text-white dark:text-gray-200  sm:mt-6 overflow-hidden">
               <h1 className="uppercase animate-slideInBottom transition-all anim-delay-500">
                 <span className="">Hi <span className="text-teal-400">,</span> I am <span className="text-teal-400">,</span> </span>
                 <span className="">Sadanand</span>

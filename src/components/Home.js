@@ -1,7 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import {MdDarkMode,MdOutlineLightMode} from "react-icons/md"
 import { FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
 import { useState } from "react";
 
 import Contact from "./Contact";
@@ -11,7 +10,7 @@ import ScrollHere from "./ScrollHere";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import ResumeButton from "./buttons/ResumeButton";
-// import resume from "../assets/resume/srcfrontend.pdf"
+import NavLinks from "./navbar/NavLinks";
 
 
 const Home = ({toggleTheme,toggle}) => {
@@ -19,7 +18,6 @@ const Home = ({toggleTheme,toggle}) => {
 
   const burgerHandler = () => {
     setBurgerOpen(!burgerOpen);
-    console.log(burgerOpen);
   };
   const [animateNav, setAnimateNav] = useState(false);
   const changeNavbarColor = () => {
@@ -54,59 +52,8 @@ const Home = ({toggleTheme,toggle}) => {
               : "hidden sm:flex sm:flex-row sm:text-black font-lighter sm:relative sm:gap-x-1 lg:gap-x-6 justify-between ml-auto mr-8"
           } [&>*]:py-1 ${animateNav? "sm:[&>*]:text-black dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
         >
-          <Link
-            activeClass="btn-active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-            className="mx-2 sm:text-gray-900 cursor-pointer  border-b-4 border-transparent hover:border-b-4 font-semibold
-             hover:border-teal-400
-                   sm:hover:text-black animate-fadeIn transition-all anim-delay-100 tracking-widest"
-          >
-            ABOUT
-          </Link>
-
-          <Link
-            activeClass="btn-active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="mx-2 sm:text-gray-900 cursor-pointer border-b-4 border-transparent hover:border-b-4 font-semibold
-             hover:border-teal-400  animate-fadeIn 
-                     transition-all anim-delay-200 tracking-widest"
-          >
-            SKILLS
-          </Link>
-
-          <Link
-            activeClass="btn-active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="mx-2 sm:text-gray-900 cursor-pointer border-b-4 border-transparent   hover:border-b-4 font-semibold
-                       hover:border-teal-400  animate-fadeIn transition-all anim-delay-300 tracking-widest"
-          >
-            PROJECTS
-          </Link>
-
-          <Link
-            activeClass="btn-active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="mx-2 sm:text-gray-900 cursor-pointer border-b-4 border-transparent hover:border-b-4 font-semibold
-                       hover:border-teal-400  animate-fadeIn  transition-all anim-delay-400 tracking-widest"
-          >
-            CONTACT
-          </Link>
+          <NavLinks closeSubmenu={burgerHandler}/>
+          
         </ul>
         <ResumeButton text={"RESUME"}/>
 
@@ -137,9 +84,8 @@ const Home = ({toggleTheme,toggle}) => {
         <div className=" mx-auto flex flex-col h-full">
 
 {/* Hero section-------------------> */}
-<Hero/>
-
         
+        <Hero/>
         <ScrollHere/>
         <About />
         <Projects />

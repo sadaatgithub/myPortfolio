@@ -142,8 +142,8 @@ const Projects = () => {
               </div>
           </div> */}
 
-          {/* 
-          <div className={`${inView? "animate-slideInRight transition-all anim-delay-400":"hidden"} rounded border-[1px] max-w-sm overflow-hidden group hover:shadow-2xl transition-all `}>
+          
+          {/* <div className={`${inView? "animate-slideInRight transition-all anim-delay-400":"hidden"} rounded border-[1px] max-w-sm overflow-hidden group hover:shadow-2xl transition-all `}>
               <img src={project3} alt="project3" loading='lazy' className="w-full h-[275px] rounded-t-sm group-hover:scale-105 transition"/>
               <div className="p-4">
                   <h4 className="mt-4">Project 3</h4>

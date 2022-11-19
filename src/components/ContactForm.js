@@ -18,7 +18,7 @@ const ContactForm = () => {
   ]
 
   const { ref:formRef, inView } = useInView({
-    // triggerOnce: true,
+    triggerOnce: true,
     threshold:0.3,
    
   });
@@ -47,10 +47,7 @@ console.log('Send')
         ...message,
         isLoading:false,
         isSuccess:true,
-      }):null,
-        console.log("done")
-      ,
-      error =>console.log(error.text)
+      }):null, error =>console.log(error.text)
       
       ).then(()=>{
         setTimeout(() => {
