@@ -3,8 +3,12 @@ import { Link } from "react-scroll";
 
 
 
-const NavLinks = ({closeSubmenu}) => {
+const NavLinks = ({burgerMenu}) => {
 const navLinks = ["about","skills","projects","contact"]
+
+const closeSubmenu = () =>{
+  burgerMenu(false)
+}
 
   return (
     <>

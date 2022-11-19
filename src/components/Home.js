@@ -52,7 +52,7 @@ const Home = ({toggleTheme,toggle}) => {
               : "hidden sm:flex sm:flex-row sm:text-black font-lighter sm:relative sm:gap-x-1 lg:gap-x-6 justify-between ml-auto mr-8"
           } [&>*]:py-1 ${animateNav? "sm:[&>*]:text-black dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
         >
-          <NavLinks closeSubmenu={burgerHandler}/>
+          <NavLinks burgerMenu={setBurgerOpen}/>
           
         </ul>
         <ResumeButton text={"RESUME"}/>
