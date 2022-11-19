@@ -48,7 +48,7 @@ const About = () => {
                   <div className= {`absolute -top-5 left-4 p-2 skill-icon text-white  
                   rounded text-2xl ${skill.color}`}> {skill.icon}</div>
                 
-              <h4 className="text-gray-900 font-medium py-3   dark:text-teal-400 transition duration-1000 ease-in-out">{skill.title}</h4>
+              <h4 className="text-gray-900 font-semibold py-3   dark:text-teal-400 transition duration-1000 ease-in-out">{skill.title}</h4>
               <p className="text-gray-600 dark:text-gray-200 text-sm">{skill.desc}</p>
               </div>
           })}

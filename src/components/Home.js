@@ -105,12 +105,12 @@ const Home = ({toggleTheme,toggle}) => {
             CONTACT
           </Link>
         </ul>
-        <input
+        <a href={resume} download
               className="hidden sm:block px-3 py-2 bg-teal-400
              text-white  tracking-wide rounded
              hover:bg-teal-500 animate-fadeIn transition-all anim-delay-500
               " value="RESUME" type="button"
-            />
+            >RESUME</a>
 
           <button className= {`${animateNav? "text-black dark:text-teal-400":"dark:text-teal-400 text-white"} px-2 py-2 sm:ml-4 ml-0 mr-6 sm:mr-0 text-xl rounded-full`} onClick={toggleTheme} >{toggle?<MdOutlineLightMode/>: <MdDarkMode/>}</button>
        

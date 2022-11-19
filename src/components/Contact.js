@@ -12,7 +12,7 @@ const {ref,inView} = useInView({
 
   return (
     <>
-    <div  ref={ref} name="contact" className="flex flex-col justify-center items-center mt-10 sm:mt-48  min-h-[100vh] bg-[#f5f5f5] dark:bg-[#252525] py-12 overflow-hidden
+    <div  ref={ref} name="contact" className="flex flex-col justify-center items-center mt-10 sm:mt-24  min-h-[100vh] bg-[#f5f5f5] dark:bg-[#252525] py-12 overflow-hidden
     transition duration-1000 ease-in-out">
       <Heading title={"CONTACT ME"} inView={inView} animProp={"slideInRight"}/>
 
