@@ -44,9 +44,9 @@ const EachProject = ({animDelay,...data }) => {
               </div>
              </div> */}
 
-<div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom":"opacity-0"} rounded border-[1px] dark:border-gray-500 max-w-sm overflow-hidden group hover:shadow-2xl transition-all flex flex-col `}>
+<div ref={ref} className={`${inView? animDelay + " " + "animate-slideInBottom":"opacity-0"} rounded border-[1px] dark:border-gray-700 max-w-sm overflow-hidden group hover:shadow-2xl transition-all flex flex-col `}>
               <img src={data.image} alt="project3" loading='lazy' className="w-full object-contain rounded-t-sm group-hover:scale-110 transition-all duration-300"/>
-              <div className="p-4 flex flex-col flex-grow">
+              <div className="p-4 flex flex-col flex-grow dark:bg-gray-900">
                   <h4 className="mt-4 font-semibold dark:text-slate-300 uppercase">{data.title}</h4>
                   <p className="text-slate-500 text-sm dark:text-slate-400">{data.desc}</p>
                   <div class="flex flex-col mt-4">

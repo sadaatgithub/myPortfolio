@@ -93,7 +93,7 @@ const About = () => {
 
         <div className="flex flex-col lg:flex-row mt-8 md:mt-28">
           <div className="flex flex-col items-center justify-center gap-y-12 px-8 sm:px-20 lg:px-10  w-full lg:w-1/2">
-            <h3 className="text-xl md:text-3xl font-bold lg:self-start self-center  text-slate-600 dark:text-gray-300">
+            <h3 className="text-xl md:text-3xl font-bold lg:self-start self-center  text-slate-600 dark:text-gray-400">
               GET TO KNOW ME
             </h3>
             <p className="leading-8 font-normal text-gray-600 text-[18px] dark:text-gray-400">
