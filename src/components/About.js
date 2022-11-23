@@ -144,7 +144,7 @@ const About = () => {
                     key={skill.id}
                     className={`${
                       inView ? "animate-slideInBottom" + " " + animDelay : ""
-                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl p-3  min-w-[175px] flex items-center gap-4 rounded-md shadow-sm
+                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl p-3  min-w-[150px] flex items-center gap-4 rounded-md shadow-sm
             opacity-0 transition-all duration-500 ease-in-out bg-white dark:bg-[#363636] dark:text-white`}
                   >
                     <div
