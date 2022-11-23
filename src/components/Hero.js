@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
     <main
-          name="about"
+          name="home"
           className="hero-banner relative flex justify-center items-center w-full  text-gray-800 h-[100vh] bg-hero-pattern2 bg-cover bg-center overflow-hidden]"
         >
           <div

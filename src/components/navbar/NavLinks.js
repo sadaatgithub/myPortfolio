@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 
 const NavLinks = ({burgerMenu}) => {
-const navLinks = ["about","skills","projects","contact"]
+const navLinks = ["home","about","projects","contact"]
 
 const closeSubmenu = () =>{
   burgerMenu(false)
