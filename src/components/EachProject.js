@@ -65,7 +65,7 @@ const EachProject = ({animDelay,...data }) => {
                   <div className="flex mt-4 md:mt-auto">
                       <button className="px-4 py-2 bg-teal-500 text-white border border-transparent hover:bg-white hover:border
                       hover:text-teal-600 hover:border-teal-600 transition-all duration-150 dark:bg-teal-500 dark:hover:bg-white
-                      rounded ml-auto"><a href={data.gitLink} target="_blank">View Code</a></button>
+                      rounded ml-auto"><a href={data.gitLink} target="_blank" rel="noreferrer">View Code</a></button>
                        {/* <button className="px-4 py-2 border border-gray-300
                       rounded hover:border-gray-700">LIVE DEMO</button> */}
                   </div>
