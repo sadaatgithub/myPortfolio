@@ -88,7 +88,7 @@ const About = () => {
     <>
       <div
         name="about"
-        className="about-me bg-[#fafafa] dark:bg-[#252525] mt-12 flex flex-col items-center sm:mt-48 py-12 transition-all duration-1000 ease-in-out overflow-hidden min-h-screen"
+        className="about-me bg-[#fafafa] dark:bg-[#252525] mt-12 flex flex-col items-center sm:mt-36 py-12 transition-all duration-1000 ease-in-out overflow-hidden min-h-screen"
       >
         <Heading title={"ABOUT ME"} animProp={"slideInBottom"} />
 
@@ -100,7 +100,7 @@ const About = () => {
             ref={ref}
           >
             <div className="col-span-full flex items-center w-full justify-center md:justify-start">
-              <h3 className={`${inView? "animate-slideInBottom":"opacity-0"} text-xl md:text-3xl font-bold text-slate-600 uppercase dark:text-gray-400`}>
+              <h3 className={`${inView? "animate-slideInBottom":"opacity-0"} text-xl md:text-2xl self-start font-bold text-slate-600 uppercase dark:text-gray-400`}>
                 My Skills
               </h3>
             </div>

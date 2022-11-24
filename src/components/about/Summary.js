@@ -12,8 +12,8 @@ const Summary = () => {
         })
   return (
     <>
- <div ref={ref} className= {` flex flex-col items-center justify-center gap-y-12 px-8 sm:px-20 lg:px-10  w-full lg:w-1/2`}>
-            <h3 className={`${inView? "animate-slideInBottom":"opacity-0"} text-xl md:text-3xl font-bold lg:self-start self-center  text-slate-600 dark:text-gray-400`}>
+ <div ref={ref} className= {` flex flex-col items-center justify-center gap-y-8 lg:gap-y-12 px-8 sm:px-20 lg:px-10  w-full lg:w-1/2`}>
+            <h3 className={`${inView? "animate-slideInBottom":"opacity-0"} text-xl md:text-2xl font-bold md:self-start self-center  text-slate-600 dark:text-gray-400`}>
               GET TO KNOW ME
             </h3>
             <p  className={`${inView? "animate-slideInBottom anim-delay-300":"opacity-0"} leading-8 font-normal text-gray-500 md:text-[18px] dark:text-gray-400 [&>strong]:text-slate-500 [&>strong]:dark:text-slate-400`}>
