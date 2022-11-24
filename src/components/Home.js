@@ -36,12 +36,12 @@ const Home = ({toggleTheme,toggle}) => {
       <div
         className={`${
           animateNav
-            ? "transition-all animate-fadeIn backdrop-blur-[3px] shadow-sm bg-white/90"
+            ? "transition-all md:animate-fadeIn backdrop-blur-[3px] shadow-sm bg-white/90"
             : "bg-transparent"
         } fixed left-0 top-0 right-0 flex justify-between items-center p-3 w-full z-50 max-w-[1440px] mx-auto dark:bg-[#252525]/50 dark:text-white transition duration-1000 ease-in-out`}
       >
         <div className="logo animate-fadeIn transition-all sm:pl-10">
-          <h1 className= {`${animateNav? "text-[hsl(240,4%,20%)] dark:text-white":"text-white"} text-2xl sm:text-4xl font-extrabold  font-marck`}>
+          <h1 className= {`${animateNav? "text-[hsl(240,4%,20%)] dark:text-teal-400":"text-white"} text-2xl sm:text-4xl font-extrabold  font-marck`}>
             SadaNand
           </h1>
         </div>

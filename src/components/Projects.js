@@ -11,7 +11,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Replica Of National Hemophilia Registry",
+      title: "National Hemophilia Registry - Clone",
       desc: "Mentain all over India's patients data",
       techStack: [
         "React",

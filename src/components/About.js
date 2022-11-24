@@ -87,7 +87,7 @@ const About = () => {
     <>
       <div
         name="about"
-        className="about-me bg-[#fafafa] dark:bg-[#252525] mt-12 flex flex-col items-center sm:mt-48 py-12 transition-all duration-1000 ease-in-out overflow-hidden"
+        className="about-me bg-[#fafafa] dark:bg-[#252525] mt-12 flex flex-col items-center sm:mt-48 py-12 transition-all duration-1000 ease-in-out overflow-hidden min-h-screen"
       >
         <Heading title={"ABOUT ME"} animProp={"slideInBottom"} />
 
@@ -96,11 +96,11 @@ const About = () => {
             <h3 className="text-xl md:text-3xl font-bold lg:self-start self-center  text-slate-600 dark:text-gray-400">
               GET TO KNOW ME
             </h3>
-            <p className="leading-8 font-normal text-gray-600 text-[18px] dark:text-gray-400">
+            <p className="leading-8 font-normal text-gray-500 text-[18px] dark:text-gray-400 [&>strong]:text-slate-500 dark:[&>strong]:text-slate-300">
               I am a front-end web developer who specializes in using JavaScript
-              to optimize web applications. I have worked extensively with React
-              js, tailwind css, vanila js and vanila css. I am also familiar
-              with Django and Django REST Framework. I am a hard worker who is
+              to optimize web applications. I have worked extensively with <strong>React JS</strong>
+              , <strong>Tailwind css</strong>, <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>. I am also familiar
+              with <strong>Django</strong> and <strong>Django REST Framework</strong>. I am a hard worker who is
               always looking to learn new skills and improve my work.
               <br />
               <br />
@@ -108,7 +108,7 @@ const About = () => {
               grow. If you have a good opportunity that matches my skills and
               experience then just say <b>Hello</b>.
             </p>
-            <div className="flex w-full justify-between [&>*]:flex-grow [&>*]:p-2 [&>*]:flex-col [&>div>p]:text-gray-400 [&>div>h6]:text-slate-800 border-t">
+            <div className="flex w-full flex-col sm:flex-row justify-between [&>*]:flex-grow [&>*]:p-2 [&>*]:flex-col [&>div>p]:text-gray-400 [&>div>h6]:text-slate-800 border-t">
               <div className="flex">
                 <h6 className="dark:text-gray-200">Phone</h6>
                 <p>7972496340</p>
@@ -124,16 +124,16 @@ const About = () => {
           </div>
 
           <div
-            className="w-full lg:w-1/2 flex flex-col px-10 mt-12 lg:mt-0 sm:px-20 lg:px-10 gap-y-12"
+            className="w-full lg:w-1/2 flex flex-col px-4 mt-12 lg:mt-0 sm:px-20 lg:px-10 gap-y-12"
             ref={ref}
           >
-            <div className="col-span-full flex items-center">
+            <div className="col-span-full flex items-center w-full justify-center md:justify-start">
               <h3 className="text-xl md:text-3xl font-bold text-slate-600 uppercase dark:text-gray-400">
                 My Skills
               </h3>
             </div>
             <div
-              className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 skill-cards gap-6 
+              className="w-full flex flex-wrap justify-center items-center skill-cards gap-2 sm:gap-6 
              transition duration-1000 ease-in-out"
             >
               {skills.map((skill) => {
@@ -144,17 +144,17 @@ const About = () => {
                     key={skill.id}
                     className={`${
                       inView ? "animate-slideInBottom" + " " + animDelay : ""
-                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl p-3  min-w-[150px] flex items-center gap-4 rounded-md shadow-sm
-            opacity-0 transition-all duration-500 ease-in-out bg-white dark:bg-[#363636] dark:text-white`}
+                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl p-2  w-[150px] sm:w-[175px]  flex items-center gap-4 rounded-md shadow-sm
+            opacity-0 transition-all duration-500 ease-in-out bg-white dark:bg-[#363636] dark:text-white border dark:border-teal-800`}
                   >
                     <div
                       className={`skill-icon text-white  
-                  rounded p-2 text-2xl ${skill.color}`}
+                  rounded-full p-2 text-2xl ${skill.color}`}
                     >
                       {skill.icon}
                     </div>
 
-                    <h4 className="text-gray-900 font-semibold text-sm md:text-base   dark:text-teal-400 transition duration-1000 ease-in-out">
+                    <h4 className="text-gray-500 font-medium text-sm md:text-sm   dark:text-teal-400 transition duration-1000 ease-in-out">
                       {skill.title}
                     </h4>
                     {/* <p className="text-gray-600 dark:text-gray-200 text-sm"> */}
