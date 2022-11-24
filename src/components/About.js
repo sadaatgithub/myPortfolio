@@ -6,7 +6,6 @@ import {
   FaGithub,
   FaReact,
   FaBootstrap,
-  FaPhone,
 } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
 import { SiJavascript, SiTailwindcss, SiDjango } from "react-icons/si";
@@ -95,11 +94,11 @@ const About = () => {
         <Heading title={"ABOUT ME"} animProp={"slideInBottom"} />
 
         <div className="flex flex-col lg:flex-row mt-8 md:mt-28">
-          <div className="flex flex-col items-center justify-center gap-y-12 px-8 sm:px-20 lg:px-10  w-full lg:w-1/2">
+          <div className= {`${inView? "animate-slideInBottom":"opacity-0"} flex flex-col items-center justify-center gap-y-12 px-8 sm:px-20 lg:px-10  w-full lg:w-1/2`}>
             <h3 className="text-xl md:text-3xl font-bold lg:self-start self-center  text-slate-600 dark:text-gray-400">
               GET TO KNOW ME
             </h3>
-            <p className="leading-8 font-normal text-gray-500 text-[18px] dark:text-gray-400 [&>strong]:text-slate-500 dark:[&>strong]:text-slate-300">
+            <p className={`${inView? "animate-slideInBottom anim-delay-300":"opacity-0"}leading-8 font-normal text-gray-500 text-[18px] dark:text-gray-400 [&>strong]:text-slate-500 dark:[&>strong]:text-slate-300"`}>
               I am a front-end web developer who specializes in using JavaScript
               to optimize web applications. I have worked extensively with <strong>React JS</strong>
               , <strong>Tailwind css</strong>, <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>. I am also familiar
@@ -131,7 +130,7 @@ const About = () => {
             ref={ref}
           >
             <div className="col-span-full flex items-center w-full justify-center md:justify-start">
-              <h3 className="text-xl md:text-3xl font-bold text-slate-600 uppercase dark:text-gray-400">
+              <h3 className={`${inView? "animate-slideInBottom":"opacity-0"} text-xl md:text-3xl font-bold text-slate-600 uppercase dark:text-gray-400`}>
                 My Skills
               </h3>
             </div>
