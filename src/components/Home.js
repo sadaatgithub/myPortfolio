@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import Contact from "./Contact";
 import Projects from "./Projects";
-import About from "./About";
+import About from "./about/About";
 import ScrollHere from "./ScrollHere";
 import Footer from "./Footer";
 import Hero from "./Hero";
