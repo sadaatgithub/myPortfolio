@@ -25,7 +25,7 @@ const closeSubmenu = () =>{
             offset={-50}
             duration={500}
             onClick={closeSubmenu}
-            className={`uppercase mx-2 sm:text-gray-900 cursor-pointer  border-b-4 border-transparent hover:border-b-4 font-semibold
+            className={`uppercase mx-2 sm:text-gray-700 cursor-pointer  border-b-4 border-transparent hover:border-b-4 font-medium
             hover:border-teal-400 sm:hover:text-black animate-fadeIn transition-all ${animDelay} tracking-widest`}
         >{link}</Link>)
     })}
