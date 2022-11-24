@@ -1,11 +1,14 @@
 import React from "react";
+import { AiFillMail } from "react-icons/ai";
 import {
   FaHtml5,
   FaCss3,
   FaGithub,
   FaReact,
   FaBootstrap,
+  FaPhone,
 } from "react-icons/fa";
+import { IoMdCall } from "react-icons/io";
 import { SiJavascript, SiTailwindcss, SiDjango } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
@@ -108,13 +111,13 @@ const About = () => {
               grow. If you have a good opportunity that matches my skills and
               experience then just say <b>Hello</b>.
             </p>
-            <div className="flex w-full flex-col sm:flex-row justify-between [&>*]:flex-grow [&>*]:p-2 [&>*]:flex-col [&>div>p]:text-gray-400 [&>div>h6]:text-slate-800 border-t">
-              <div className="flex">
-                <h6 className="dark:text-gray-200">Phone</h6>
+            <div className="flex w-full flex-col sm:flex-row justify-between [&>*]:flex-grow [&>*]:p-2 [&>*]:flex-row [&>div>p]:text-gray-400 [&>div>h6]:text-slate-800 border-t">
+              <div className="flex items-center gap-4">
+                <button className="dark:text-gray-200 text-xl text-gray-500"><IoMdCall/></button>
                 <p>7972496340</p>
               </div>
-              <div className="flex">
-                <h6 className="dark:text-gray-200">Email</h6>
+              <div className="flex items-center gap-4">
+                <button className="dark:text-gray-200 text-xl text-gray-500"><AiFillMail/></button>
                 <p>sadachaudhari@gmail.com</p>
               </div>
               {/* <div className="flex">

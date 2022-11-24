@@ -6,10 +6,17 @@ import InitialLoader from "./components/InitialLoader";
 
 function App() {
   const [loader,setLoader] = useState(true)
-  const [toggleDark,setToggleDark] = useState(false)
+  const [toggleDark,setToggleDark] = useState(localStorage.getItem("theme") === "dark"? true:false)
 
   const toggleDarkLight = ()=>{
     setToggleDark(!toggleDark)
+    if(toggleDark){
+      localStorage.setItem("theme","")
+
+    } else{
+      localStorage.setItem("theme","dark")
+
+    }
   }
   useEffect(() =>{
     // setLoader(true)

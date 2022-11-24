@@ -48,7 +48,7 @@ const Home = ({toggleTheme,toggle}) => {
         <ul
           className={`${
             burgerOpen
-              ? "flex fixed top-0 left-0 bottom-0 right-0 bg-[#181616cb] h-[100vh]  backdrop-blur-[4px] text-white  flex-col space-y-4 justify-center items-center z-20 animate-drawerDown transition-all"
+              ? "flex fixed top-0 left-0 bottom-0 right-0 bg-[#181616d8] h-[100vh]  backdrop-blur-[4px] text-white  flex-col space-y-4 justify-center items-center z-20 animate-drawerDown transition-all"
               : "hidden sm:flex sm:flex-row sm:text-black font-lighter sm:relative sm:gap-x-1 lg:gap-x-6 justify-between ml-auto mr-8"
           } [&>*]:py-1 ${animateNav? "sm:[&>*]:text-black dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
         >
