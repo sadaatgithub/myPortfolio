@@ -26,12 +26,15 @@ const Home = ({toggleTheme,toggle}) => {
     burgerState.current.setAttribute("aria-expanded","true")
     setBurgerOpen(true)
   } else{
-    burgerState.current.setAttribute("data-state","closed")
-    burgerState.current.setAttribute("aria-expanded","false")
-    setBurgerOpen(false)
-
+    closeBurgerOnLink()
 
   }
+ }
+ const closeBurgerOnLink = () =>{
+  burgerState.current.setAttribute("aria-expanded","false")
+  burgerState.current.setAttribute("data-state","closed")
+
+  setBurgerOpen(false)
  }
  
   
@@ -68,7 +71,7 @@ const Home = ({toggleTheme,toggle}) => {
               : "invisible opacity-0 fixed inset-0 scale-0  sm:space-y-0  sm:visible sm:opacity-100 sm:scale-100 sm:static sm:flex sm:flex-row sm:text-black font-lighter  sm:gap-x-1 lg:gap-x-6 sm:justify-end lg:justify-between ml-auto lg:mr-8"
           } transition-all duration-300 ease-linear [&>*]:py-1 h-screen sm:h-auto flex flex-col space-y-4 justify-center items-center ${animateNav? " dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
         >
-          <NavLinks burgerMenu={hamburgerHandler}/>
+          <NavLinks closeBurgerOnLink={closeBurgerOnLink}/>
           
         </ul>
         <ResumeButton text={"RESUME"}/>

@@ -3,11 +3,11 @@ import { Link } from "react-scroll";
 
 
 
-const NavLinks = ({burgerMenu}) => {
+const NavLinks = ({closeBurgerOnLink}) => {
 const navLinks = ["home","about","projects","contact"]
 
 const closeSubmenu = () =>{
-  burgerMenu()
+  closeBurgerOnLink()
 }
 
   return (
