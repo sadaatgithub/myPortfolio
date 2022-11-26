@@ -42,9 +42,9 @@ const About = () => {
     },
     {
       id: 4,
-      title: "Javascript",
+      title: "JavaScript",
       icon: <SiJavascript />,
-      color: "bg-green-500",
+      color: "bg-neutral-500",
       // desc: "Learned JS by developing projects on it,Have good knowledge of closure,Promises",
     },
     {
@@ -70,9 +70,9 @@ const About = () => {
     },
     {
       id: 8,
-      title: "Github",
+      title: "GitHub",
       icon: <FaGithub />,
-      color: "bg-zinc-500",
+      color: "bg-slate-500",
       // desc: "Have basic knowledge of github,how to Initialize,branch,merging branch to main branch",
     },
     {
@@ -105,8 +105,8 @@ const About = () => {
               </h3>
             </div>
             <div
-              className="w-full flex flex-wrap justify-center items-center skill-cards gap-2 sm:gap-6 
-             transition duration-1000 ease-in-out"
+              className="w-full flex flex-wrap justify-center lg:justify-start items-center skill-cards gap-4 sm:gap-6 
+             transition duration-1000 ease-in-out [&>*>nth-child(last)]:bg-red-600"
             >
               {skills.map((skill) => {
                 const animDelay = "anim-delay-" + 100 * skill.id;
@@ -116,17 +116,17 @@ const About = () => {
                     key={skill.id}
                     className={`${
                       inView ? "animate-slideInBottom" + " " + animDelay : ""
-                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl p-2  w-[150px] sm:w-[175px]  flex items-center gap-4 rounded-md shadow-sm
-            opacity-0 transition-all duration-500 ease-in-out bg-white dark:bg-[#363636] dark:text-white border dark:border-teal-800`}
+                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl w-[80%] xs:w-[150px] sm:w-[175px]  flex items-center gap-4 rounded-md shadow-md
+            opacity-0 transition-all duration-500 ease-in-out bg-white dark:bg-[#363636] dark:text-white border dark:border-teal-800 overflow-hidden`}
                   >
                     <div
                       className={`skill-icon text-white  
-                  rounded-full p-2 text-2xl ${skill.color}`}
+                   p-4 text-2xl ${skill.color}`}
                     >
                       {skill.icon}
                     </div>
 
-                    <h4 className="text-gray-500 font-medium text-sm md:text-sm   dark:text-teal-400 transition duration-1000 ease-in-out">
+                    <h4 className="text-gray-500 font-semibold text-sm md:text-sm tracking-wide  dark:text-teal-400 transition duration-1000 ease-in-out">
                       {skill.title}
                     </h4>
                     {/* <p className="text-gray-600 dark:text-gray-200 text-sm"> */}

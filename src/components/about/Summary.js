@@ -16,11 +16,11 @@ const Summary = () => {
             <h3 className={`${inView? "animate-slideInBottom":"opacity-0"} text-xl md:text-2xl font-bold md:self-start self-center  text-slate-600 dark:text-gray-400`}>
               GET TO KNOW ME
             </h3>
-            <p  className={`${inView? "animate-slideInBottom anim-delay-300":"opacity-0"} leading-8 font-normal text-gray-500 md:text-[18px] dark:text-gray-400 [&>strong]:text-slate-500 [&>strong]:dark:text-slate-400`}>
+            <p  className={`${inView? "animate-slideInBottom anim-delay-300":"opacity-0"} leading-8 font-normal text-slate-500 md:text-[18px] dark:text-gray-400 [&>span]:font-medium [&>strong]:dark:text-slate-400 text-justify`}>
               I am a front-end web developer who specializes in using JavaScript
-              to optimize web applications. I have worked extensively with <strong>React JS</strong>
-              , <strong>Tailwind css</strong>, <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>. I am also familiar
-              with <strong>Django</strong> and <strong>Django REST Framework</strong>. I am a hard worker who is
+              to optimize web applications. I have worked extensively with <span>React JS</span>
+              , <span>Tailwind css</span>, <span>HTML</span>, <span>CSS</span> and <span>JavaScript</span>. I am also familiar
+              with <span>Django</span> and <span>Django REST Framework</span>. I am a hard worker who is
               always looking to learn new skills and improve my work.
               <br />
               <br />

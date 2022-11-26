@@ -25,11 +25,12 @@ const closeSubmenu = () =>{
             offset={-50}
             duration={500}
             onClick={closeSubmenu}
-            className={`uppercase mx-2 sm:text-gray-700 cursor-pointer  border-b-4 border-transparent hover:border-b-4 font-medium
-            hover:border-teal-400 sm:hover:text-black animate-fadeIn transition-all ${animDelay} tracking-widest`}
+            className={`uppercase mx-2 sm:text-gray-700 cursor-pointer   font-medium
+             sm:hover:text-black animate-fadeIn transition-all ${animDelay} tracking-widest nav-link hover:before:w-full`}
         >{link}</Link>)
     })}
     </>
+    // border-b-4 border-transparent hover:border-b-4 hover:border-teal-400
   )
 }
 

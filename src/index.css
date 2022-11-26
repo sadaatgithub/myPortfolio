@@ -7,10 +7,14 @@
 @tailwind utilities;
 
 @layer utilities { 
-    .btn-active {
+    .nav-link:before {
       /* ... */
-      @apply border-b-4 border-teal-400
+      @apply content-[""] absolute bottom-0 rounded-full left-0  w-0 h-[2px] bg-teal-400 transition-all duration-300
     }
+    .nav-link.btn-active:before{
+      @apply w-full
+    }
+   
     .font-poppins{
         font-family:"Poppins"
     }
