@@ -51,13 +51,13 @@ const EachProject = ({animDelay,...data }) => {
               <div className="p-4 flex flex-col flex-grow  dark:bg-gray-800">
                   <h4 className="mt-4 font-semibold dark:text-slate-300 uppercase">{data.title}</h4>
                   <p className="text-slate-500 text-sm dark:text-slate-400">{data.desc}</p>
-                  <div class="flex flex-col mt-4">
+                  <div className="flex flex-col mt-4">
                   <h4 className="mb-2 text-sm sm:text-base dark:text-white">TECH USED</h4>
                   
                   <ul className="flex text-xs gap-2 flex-wrap">
 
-                {data.techStack.map((tech)=>{
-                  return <li className="bg-gray-200 tracking-wide sm:py-1 p-1 sm:px-2 rounded-sm dark:bg-gray-700 dark:text-gray-200">{tech}</li>
+                {data.techStack.map((tech,index)=>{
+                  return <li key={index} className="bg-gray-200 tracking-wide sm:py-1 p-1 sm:px-2 rounded-sm dark:bg-gray-700 dark:text-gray-200">{tech}</li>
                 })}
 
                 </ul>

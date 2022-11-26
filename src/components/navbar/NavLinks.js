@@ -7,7 +7,7 @@ const NavLinks = ({burgerMenu}) => {
 const navLinks = ["home","about","projects","contact"]
 
 const closeSubmenu = () =>{
-  burgerMenu(false)
+  burgerMenu()
 }
 
   return (
@@ -17,7 +17,7 @@ const closeSubmenu = () =>{
     const animDelay = "anim-delay-" + 100 * index
 
         return (
-        <Link 
+        <Link key={index}
             activeClass="btn-active"
             to={link}
             spy={true}

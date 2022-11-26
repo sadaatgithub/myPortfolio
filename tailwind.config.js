@@ -25,12 +25,14 @@ module.exports = {
           "slideInLeft 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         slideInRight:
           "slideInRight 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
-        drawerDown:
+          drawerDown:
           "drawerDown 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both",
+          drawerUp:
+          "drawerUp 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both",
         scaleDownCenter:
           "scaleDownCenter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         slidUpFast:
-          "slidUpFast 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s both",
+          "slidUpFast 2s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both",
         slideInBottom:
           "slideInBottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       },
@@ -92,6 +94,20 @@ module.exports = {
             // -webkit-transform: translateX(0);
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
             opacity: 1,
+          },
+        },
+        drawerUp: {
+          "0%": {
+            // -webkit-transform: translateX(-1000px);
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+
+            opacity: 1,
+          },
+          "100%": {
+            // -webkit-transform: translateX(0);
+            clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+
+            opacity: 0,
           },
         },
         scaleDownCenter: {

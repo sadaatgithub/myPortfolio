@@ -20,16 +20,16 @@ function App() {
   }
   useEffect(() =>{
     // setLoader(true)
-    setTimeout(() =>{
-        setLoader(false)
-    },4000)
+    // setTimeout(() =>{
+    //     setLoader(false)
+    // },4000)
 
   },[])
 
   return (
     <>
     <div className={`${toggleDark? "dark":""}`}>
-    {loader? <InitialLoader/>: <Home toggleTheme={toggleDarkLight} toggle={toggleDark} />
+    {loader? <InitialLoader setLoader={setLoader}/>: <Home toggleTheme={toggleDarkLight} toggle={toggleDark} />
     }
     </div>
     </>

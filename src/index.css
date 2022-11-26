@@ -42,14 +42,14 @@
     #text-effect>path:nth-child(1){
       stroke-dasharray: 301;      
       stroke-dashoffset: 301px;
-      animation: text-effect 2.5s ease forwards;
+      animation: text-effect 3s ease forwards;
   
       
   }
   #text-effect>path:nth-child(2){
       stroke-dasharray: 193px;
       stroke-dashoffset: 193px;
-      animation: text-effect 2.5s ease forwards;
+      animation: text-effect 3s ease forwards;
       /* animation: fill 1s ease forwards 2.5s; */
   }
 
@@ -93,4 +93,33 @@
   }
   .anim-delay-1500{
     animation-delay:1.5s;
+  }
+
+  .button-one {
+    --button-color: #ffff;
+    --button-color-dark:rgb(64, 204, 197);
+  }
+  .button-one .line {
+    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+  }
+  
+  .button-one[aria-expanded="true"] .line {
+    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  }
+  
+  .button-one[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+  }
+  
+  .button-one[aria-expanded="true"] .top {
+    rotate: 45deg;
+  }
+  
+  .button-one[aria-expanded="true"] .middle {
+    opacity: 0;
+  }
+  
+  .button-one[aria-expanded="true"] .bottom {
+    rotate: -45deg;
   }

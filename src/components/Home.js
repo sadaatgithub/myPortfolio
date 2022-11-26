@@ -1,7 +1,7 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import {MdDarkMode,MdOutlineLightMode} from "react-icons/md"
 import { FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import Contact from "./Contact";
 import Projects from "./Projects";
@@ -15,10 +15,26 @@ import NavLinks from "./navbar/NavLinks";
 
 const Home = ({toggleTheme,toggle}) => {
   const [burgerOpen, setBurgerOpen] = useState(false);
+  const burgerState = useRef()
 
-  const burgerHandler = () => {
-    setBurgerOpen(!burgerOpen);
-  };
+
+ const hamburgerHandler = () =>{
+  const currentState = burgerState.current.getAttribute("data-state")
+  if(!currentState || currentState === "closed"){
+
+    burgerState.current.setAttribute("data-state","opened")
+    burgerState.current.setAttribute("aria-expanded","true")
+    setBurgerOpen(true)
+  } else{
+    burgerState.current.setAttribute("data-state","closed")
+    burgerState.current.setAttribute("aria-expanded","false")
+    setBurgerOpen(false)
+
+
+  }
+ }
+ 
+  
   const [animateNav, setAnimateNav] = useState(false);
   const changeNavbarColor = () => {
     if (window.scrollY >= 90) {
@@ -48,11 +64,11 @@ const Home = ({toggleTheme,toggle}) => {
         <ul
           className={`${
             burgerOpen
-              ? "flex fixed top-0 left-0 bottom-0 right-0 bg-[#181616d8] h-[100vh]  backdrop-blur-[4px] text-white  flex-col space-y-4 justify-center items-center z-20 animate-drawerDown transition-all"
-              : "hidden sm:flex sm:flex-row sm:text-black font-lighter sm:relative sm:gap-x-1 lg:gap-x-6 sm:justify-end lg:justify-between ml-auto lg:mr-8"
-          } [&>*]:py-1 ${animateNav? " dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
+              ? "fixed inset-0 bg-[#181616f1] scale-100   backdrop-blur-[4px] text-white   z-20 "
+              : "invisible opacity-0 fixed inset-0 scale-0  sm:space-y-0  sm:visible sm:opacity-100 sm:scale-100 sm:static sm:flex sm:flex-row sm:text-black font-lighter  sm:gap-x-1 lg:gap-x-6 sm:justify-end lg:justify-between ml-auto lg:mr-8"
+          } transition-all duration-300 ease-linear [&>*]:py-1 h-screen sm:h-auto flex flex-col space-y-4 justify-center items-center ${animateNav? " dark:[&>*]:text-white":"[&>*]:text-white/90 [&>*:hover]:text-white"}`}
         >
-          <NavLinks burgerMenu={setBurgerOpen}/>
+          <NavLinks burgerMenu={hamburgerHandler}/>
           
         </ul>
         <ResumeButton text={"RESUME"}/>
@@ -73,14 +89,22 @@ const Home = ({toggleTheme,toggle}) => {
 {/* Hamburger menu ------------------------> */}
 
 
-        <div className="sm:hidden z-40 absolute right-2 dark:text-white">
-          {burgerOpen ? (
-            <FaTimes onClick={burgerHandler} color={"white"} size={25} />
-          ) : (
-            <GiHamburgerMenu onClick={burgerHandler} size={20} className={`${animateNav? "text-black dark:text-white":"text-white"}`} />
-          )}
+        <div className="sm:hidden z-40 absolute right-2 top-4 dark:text-white">
+         
+        <button ref={burgerState} className="button-one" aria-controls="primary-navigation" aria-expanded="false" onClick={hamburgerHandler}> 
+    <svg fill={`${animateNav? "var(--button-color-dark)":"var(--button-color)"}`} className="hamburger" viewBox="0 0 100 100" width="30">
+      <rect className="line top" width="80" height="10" x="10" y="25" rx="5">
+      </rect>
+      <rect className="line middle" width="80" height="10" x="10" y="45" rx="5">
+      </rect>
+      <rect className="line bottom" width="80" height="10" x="10" y="65" rx="5">
+      </rect>
+    </svg>
+  </button>
         </div>
       </div>
+
+
         <div className=" mx-auto flex flex-col h-full">
 
 {/* Hero section-------------------> */}
