@@ -25,7 +25,7 @@ const Hero = () => {
             </h3>
             </div>
             <div className="overflow-hidden flex justify-center">
-            <p className="text-sm leading-loose w-auto text-center sm:w-1/2 sm:text-base mt-2 text-white/80 animate-slideInBottom transition-all anim-delay-900 dark:text-gray-400">
+            <p className="text-base w-auto text-center sm:w-1/2 sm:text-base mt-2 text-white/80 animate-slideInBottom transition-all anim-delay-900 dark:text-gray-400">
             A Frontend focused Web Developer building the Frontend of Websites and 
             Web Applications that leads to the success of the overall product
             </p>
