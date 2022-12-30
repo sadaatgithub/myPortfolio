@@ -1,6 +1,4 @@
-import { GiHamburgerMenu } from "react-icons/gi";
 import {MdDarkMode,MdOutlineLightMode} from "react-icons/md"
-import { FaTimes } from "react-icons/fa";
 import { useRef, useState } from "react";
 
 import Contact from "./Contact";
