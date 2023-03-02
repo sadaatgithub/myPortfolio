@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import project1 from "../assets/project_imgs/Project_NHR_1.png";
 import project2 from "../assets/project_imgs/Stripe_Submenu.png";
 import project3 from "../assets/project_imgs/react-to-do.png";
+import project4 from "../assets/project_imgs/samarth-physio.png"
 
 import EachProject from "./EachProject";
 import Heading from "./Heading";
@@ -10,8 +11,21 @@ import Heading from "./Heading";
 const Projects = () => {
   const projects = [
     {
+      id:4,
+      title:"Samarth Physio",
+      desc:"A physiotherapy website to showcase clients availabel service and relates blogs",
+      techStack:[
+        "Next JS","React-Hooks","Sanity JS", "Tailwind CSS"
+      ], image:project4,
+      liveDemo:true,
+      isOngithub:true,
+      gitLink:"",
+      demoLink:"https://samarth-physio.vercel.app/"
+      
+    },
+    {
       id: 1,
-      title: "National Hemophilia Registry - Clone",
+      title: "Patient Registry Portal",
       desc: "Mentain all over India's patients data",
       techStack: [
         "React",
@@ -26,6 +40,8 @@ const Projects = () => {
       image: project1,
       gitLink: "https://github.com/sadaatgithub/dashboard",
       isOngithub:true,
+      liveDemo:false,
+      
     },
 
     {
@@ -36,6 +52,9 @@ const Projects = () => {
       image: project2,
       gitLink:"https://github.com/sadaatgithub/StripeSubmenu",
       isOngithub:true,
+      liveDemo:false,
+
+      
     },
     {
       id: 3,
@@ -49,58 +68,11 @@ const Projects = () => {
       image: project3,
       gitLink:"https://github.com/sadaatgithub/react_todo_app",
       isOngithub:true,
+      liveDemo:false,
+
+      
     },
-    {
-      id: 4,
-      title: "Project Four",
-      desc: "This is project no 4",
-      techStack: [
-        "React",
-        "Redux-Toolkit",
-        "React-Router-dom",
-        "Axios",
-        "Chart.js",
-        "Django REST API",
-        "JWT AUTH",
-      ],
-      image: project2,
-      gitLink:"",
-      isOngithub:false,
-    },
-    {
-      id: 5,
-      title: "Project Five",
-      desc: "This is project no 5",
-      techStack: [
-        "React",
-        "Redux-Toolkit",
-        "React-Router-dom",
-        "Axios",
-        "Chart.js",
-        "Django REST API",
-        "JWT AUTH",
-      ],
-      image: project2,
-      gitLink:"",
-      isOngithub:false,
-    },
-    {
-      id: 6,
-      title: "Project Six",
-      desc: "This is project no 6",
-      techStack: [
-        "React",
-        "Redux-Toolkit",
-        "React-Router-dom",
-        "Axios",
-        "Chart.js",
-        "Django REST API",
-        "JWT AUTH",
-      ],
-      image: project1,
-      gitLink:"",
-      isOngithub:false,
-    },
+    
   ];
 
   const { ref, inView } = useInView({
@@ -122,6 +94,7 @@ const Projects = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 grid-flow-row  mt-24 px-1 sm:px-10 "
         >
           {projects.filter((project) => project.isOngithub === true).map((data, index) => {
+            
             const animDelay = "anim-delay-" + 100 * index;
             return (
               <EachProject key={data.id} {...data} animDelay={animDelay} />
