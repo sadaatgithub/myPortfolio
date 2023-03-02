@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe24eef3.css",
-    "main.js": "/static/js/main.6f2d430f.js",
-    "static/media/heroLandscape1.jpg": "/static/media/heroLandscape1.b6c3931702238e97de51.jpg",
+    "main.css": "/static/css/main.218473da.css",
+    "main.js": "/static/js/main.a90c1127.js",
     "static/media/Stripe_Submenu.png": "/static/media/Stripe_Submenu.084ec68b04eef7d16f55.png",
-    "static/media/SadanandChoudhari.pdf": "/static/media/SadanandChoudhari.05c0a8b0cb9159564430.pdf",
+    "static/media/heroLandscape1.jpg": "/static/media/heroLandscape1.d57f10171a32e9d7325b.jpg",
+    "static/media/Sadanand_Choudhari_React_Dev.pdf": "/static/media/Sadanand_Choudhari_React_Dev.37ab9ba616be620cc429.pdf",
     "static/media/Project_NHR_1.png": "/static/media/Project_NHR_1.6d8953bbc6130f7672ba.png",
     "static/media/react-to-do.png": "/static/media/react-to-do.fc4926bd94d0eae52ac2.png",
     "index.html": "/index.html",
-    "main.fe24eef3.css.map": "/static/css/main.fe24eef3.css.map",
-    "main.6f2d430f.js.map": "/static/js/main.6f2d430f.js.map"
+    "main.218473da.css.map": "/static/css/main.218473da.css.map",
+    "main.a90c1127.js.map": "/static/js/main.a90c1127.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe24eef3.css",
-    "static/js/main.6f2d430f.js"
+    "static/css/main.218473da.css",
+    "static/js/main.a90c1127.js"
   ]
 }
