@@ -18,7 +18,7 @@ const Summary = () => {
             </h3>
             <p  className={`${inView? "animate-slideInBottom anim-delay-300":"opacity-0"} text-base font-normal text-slate-700 md:text-[18px] leading-7 dark:text-gray-300 [&>span]:font-medium [&>strong]:dark:text-slate-400 text-justify`}>
               I am a front-end web developer who specializes in using JavaScript
-              to optimize web applications. I have worked extensively with <span>React JS</span>
+              to optimize web applications. I have worked extensively with <span>React JS</span> <span>Next JS</span>
               , <span>Tailwind CSS</span>, <span>HTML</span>, <span>CSS</span> and <span>JavaScript</span>. I am also familiar
               with <span>Django</span> and <span>Django REST Framework</span>. I am a hard worker who is
               always looking to learn new skills and improve my work.
