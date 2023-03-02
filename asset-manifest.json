@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.218473da.css",
-    "main.js": "/static/js/main.ca5df7dd.js",
+    "main.js": "/static/js/main.925bdc5a.js",
+    "static/media/samarth-physio.png": "/static/media/samarth-physio.0a2c8c236ab5f53c8537.png",
     "static/media/Stripe_Submenu.png": "/static/media/Stripe_Submenu.084ec68b04eef7d16f55.png",
     "static/media/heroLandscape1.jpg": "/static/media/heroLandscape1.d57f10171a32e9d7325b.jpg",
     "static/media/Sadanand_Choudhari_React_Dev.pdf": "/static/media/Sadanand_Choudhari_React_Dev.37ab9ba616be620cc429.pdf",
@@ -9,10 +10,10 @@
     "static/media/react-to-do.png": "/static/media/react-to-do.fc4926bd94d0eae52ac2.png",
     "index.html": "/index.html",
     "main.218473da.css.map": "/static/css/main.218473da.css.map",
-    "main.ca5df7dd.js.map": "/static/js/main.ca5df7dd.js.map"
+    "main.925bdc5a.js.map": "/static/js/main.925bdc5a.js.map"
   },
   "entrypoints": [
     "static/css/main.218473da.css",
-    "static/js/main.ca5df7dd.js"
+    "static/js/main.925bdc5a.js"
   ]
 }
