@@ -36,7 +36,6 @@ const form = useRef()
       ...message,
       isLoading:true,
     })
-console.log('Send')
     emailjs.sendForm(
       process.env.REACT_APP_SERVICE_ID,
       process.env.REACT_APP_TEMPLATE_ID,

@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from "../../assets/resume/SadanandChoudhari.pdf"
+import resume from "../../assets/resume/Sadanand_Choudhari_React_Dev.pdf"
 
 const ResumeButton = ({text}) => {
   return (

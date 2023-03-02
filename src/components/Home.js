@@ -28,6 +28,7 @@ const Home = ({toggleTheme,toggle}) => {
 
   }
  }
+ 
  const closeBurgerOnLink = () =>{
   burgerState.current.setAttribute("aria-expanded","false")
   burgerState.current.setAttribute("data-state","closed")
@@ -106,9 +107,9 @@ const Home = ({toggleTheme,toggle}) => {
       </div>
 
 
+{/* Hero section-------------------> */}
         <div className=" mx-auto flex flex-col h-full">
 
-{/* Hero section-------------------> */}
         
         <Hero/>
         <ScrollHere/>

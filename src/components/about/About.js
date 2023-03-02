@@ -5,7 +5,10 @@ import {
   FaGithub,
   FaReact,
   FaBootstrap,
+  FaWordpress,
+  
 } from "react-icons/fa";
+import {SiNextdotjs} from "react-icons/si"
 import { SiJavascript, SiTailwindcss, SiDjango } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
@@ -19,6 +22,10 @@ const About = () => {
   });
 
   const skills = [
+    {id:11,
+    title:"Next JS",
+  icon:<SiNextdotjs/>,
+  color:"bg-slate-600",},
     {
       id: 1,
       title: "React JS",
@@ -72,7 +79,12 @@ const About = () => {
       title: "Bootstrap",
       icon: <FaBootstrap />,
       color: "bg-sky-500",
-    },
+    },{
+      id:10,
+      title:"WordPress",
+      icon:<FaWordpress/>,
+      color:"bg-emerald-500"
+    }
   ];
 
   return (
@@ -107,7 +119,7 @@ const About = () => {
                     key={skill.id}
                     className={`${
                       inView ? "animate-slideInBottom" + " " + animDelay : ""
-                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl w-[80%] xs:w-[150px] sm:w-[175px]  flex items-center gap-4 rounded-md shadow-sm
+                    } dark:[&>svg]:text-teal-500 [&>svg]:text-5xl w-[80%] xs:w-[150px] sm:w-[175px]  flex items-center gap-2 rounded-md shadow-sm
             opacity-0 transition-all duration-500 ease-in-out bg-white dark:bg-[#363636] dark:text-white border dark:border-teal-800 overflow-hidden`}
                   >
                     <div
