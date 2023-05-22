@@ -1,9 +1,10 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import project1 from "../assets/project_imgs/Project_NHR_1.png";
-import project2 from "../assets/project_imgs/Stripe_Submenu.png";
+import project2 from "../assets/project_imgs/solar_solutions.png";
 import project3 from "../assets/project_imgs/react-to-do.png";
-import project4 from "../assets/project_imgs/samarth-physio.png"
+import project4 from "../assets/project_imgs/samartha_physio.png"
+import project5 from "../assets/project_imgs/Clinic_mgmt.png"
 
 import EachProject from "./EachProject";
 import Heading from "./Heading";
@@ -11,16 +12,29 @@ import Heading from "./Heading";
 const Projects = () => {
   const projects = [
     {
+      id:5,
+      title:"Solar Solutions",
+      desc:"A Solar website to show clients availabel service",
+      techStack:[
+        "Next JS","React-Hooks","Framer Motion", "Tailwind CSS"
+      ], image:project2,
+      liveDemo:true,
+      isOngithub:true,
+      gitLink:"",
+      demoLink:"https://solar-solutions.vercel.app/"
+      
+    },
+    {
       id:4,
       title:"Samarth Physio",
-      desc:"A physiotherapy website to showcase clients availabel service and relates blogs",
+      desc:"A physiotherapy website to show clients availabel service and relates blogs",
       techStack:[
         "Next JS","React-Hooks","Sanity JS", "Tailwind CSS"
       ], image:project4,
       liveDemo:true,
       isOngithub:true,
       gitLink:"",
-      demoLink:"https://samarth-physio.vercel.app/"
+      demoLink:"https://samarthaphysio.com/"
       
     },
     {
@@ -46,32 +60,17 @@ const Projects = () => {
 
     {
       id: 2,
-      title: "Stripe UI",
-      desc: "Stripe Responsive UI",
-      techStack: ["React", "React-Hooks","useContext","Tailwind css"],
-      image: project2,
-      gitLink:"https://github.com/sadaatgithub/StripeSubmenu",
+      title: "Clinic Management System",
+      desc: "A Clinic management system to mentain all clinic stuff",
+      techStack: ["React", "React-Hooks","Next Js","Redux-Toolkit","Tailwind css","Django API"],
+      image: project5,
+      gitLink:"https://github.com/sadaatgithub/patient-management-system",
       isOngithub:true,
       liveDemo:false,
 
       
     },
-    {
-      id: 3,
-      title:"To-DO",
-      desc: "A React to-do app",
-      techStack: [
-        "React",
-        "React-hooks",
-        
-      ],
-      image: project3,
-      gitLink:"https://github.com/sadaatgithub/react_todo_app",
-      isOngithub:true,
-      liveDemo:false,
-
-      
-    },
+   
     
   ];
 
